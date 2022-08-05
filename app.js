@@ -36,13 +36,15 @@ app.use(session({
 app.use(Routes);
 
 app.use(function(error, req, res, next) {
-  res.status(404).render('errors/404');
+  res.status(404).render('404');
 })
 
 app.use(function(error, req, res, next) {
-  res.status(500).render('errors/500');
+  res.status(500).render('500');
 })
 
 db.connectToDatabase().then(function () {
-  app.listen(80);
+  app.listen(8080);
 });
+
+module.exports = app
