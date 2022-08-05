@@ -6,7 +6,7 @@ let database;
 
 async function connectToDatabase() {
   const client = await MongoClient.connect(
-    'mongodb://localhost:27017'
+    'mongodb+srv://merentalan:<password>@cluster0.3zj1e.mongodb.net/?retryWrites=true&w=majority'
   );
   database = client.db('deep_control');
 }
