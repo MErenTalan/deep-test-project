@@ -44,5 +44,5 @@ app.use(function(error, req, res, next) {
 })
 
 db.connectToDatabase().then(function () {
-  app.listen(8080);
+  app.listen(80);
 });
