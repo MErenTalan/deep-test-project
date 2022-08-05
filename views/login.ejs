@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <%- include('includes/head', {title: 'Deep Control Technology Anasayfa', description: 'Deep Control Technology\'nin anasayfasına ulaştınız '}) %> 
+    <!--İsterseniz bu alana daha fazla stil dosyası ekleyebilirsiniz-->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        Üzülerek belirtiyoruz ki artık geçerli olmayan bir tarayıcı kullanıyorsunuz. Lütfen tarayıcınızı güncelleyin.
+      </p>
+    <![endif]-->
+    
+    <!-- Header -->
+<%- include('includes/header') %>
+    <!-- End of Header -->
+
+    <section class="hero-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="hero-content">
+                        <h1>Aramıza hoşgeldiniz</h1>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-12">
+                    <div class="account-login section">
+                        <div class="container">
+                        <div class="row">
+                        <div class="offset-md-1">
+                        <form action="/login" method="POST" class="card login-form inner-content">
+                        <div class="card-body">
+                        <div class="title">
+                        <h3>Hesabınıza giriş yapın</h3>
+                        <p>ve kaldığınız yerden devam edin</p>
+                        </div>
+                        <div class="alert alert-warning my-3 <% if(!errorMessage){ %> d-none <% } %>" id="signinAlert" role="alert"><%= errorMessage %></div>
+                        <div class="input-head">
+                        <div class="form-group input-group">
+                        <label><i class="lni lni-envelope"></i></label>
+                        <input class="form-control" type="email" name="email" placeholder="E-posta adresi" required="">
+                        </div>
+                        <div class="form-group input-group">
+                        <label><i class="lni lni-lock-alt"></i></label>
+                        <input class="form-control" type="password" name="password" placeholder="Şifre" required="">
+                        </div>
+                        </div>
+                        <div class="button">
+                        <button class="btn" type="submit">Devam et</button>
+                        </div>
+                        <h4 class="create-account">Henüz bir hesabınız yoksa <a href="/signin">hemen kayıt olun</a>
+                        </h4>
+                        </div>
+                        </form>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <%- include('includes/footer') %>
+    <!-- End of Footer -->
+
+    <!-- İsterseniz bu alana daha fazla JS dosyası ekleyebilirsiniz -->
+
+</body>
+
+</html>

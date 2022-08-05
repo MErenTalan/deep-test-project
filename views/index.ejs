@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <%- include('includes/head', {title: 'Deep Control Technology Anasayfa', description: 'Deep Control Technology\'nin anasayfasına ulaştınız '}) %> 
+    <!--İsterseniz bu alana daha fazla stil dosyası ekleyebilirsiniz-->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        Üzülerek belirtiyoruz ki artık geçerli olmayan bir tarayıcı kullanıyorsunuz. Lütfen tarayıcınızı güncelleyin.
+      </p>
+    <![endif]-->
+    
+    <!-- Header -->
+<%- include('includes/header') %>
+    <!-- End of Header -->
+
+    <!-- Hero -->
+    <section class="hero-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="hero-content">
+                        <h4>Yüksek standartlarda çözümler</h4>
+                        <h1>Mühendislik, Teknoloji ve Danışmanlık</h1>
+                        <p>Uygulamalarımızı kullanmak için kayıt olun
+                        </p>
+                        <% if(!isAuth) { %>
+                            <div class="hero-buttons">
+                                <div class="button">
+                                    <a href="/login" class="btn ">Giriş Yap</a>
+                                </div>
+                                <div class="button">
+                                    <a href="/signin" class="btn ">Kayıt Ol</a>
+                                </div>
+                            </div>
+                            <% } else { %>
+                                <div class="button">
+                                    <a href="/harita" class="btn ">Haritaya Gidin</a>
+                                </div>
+                                <% } %> 
+                    </div>
+                </div>
+                <div class="col-lg-7 col-12">
+                    <div class="hero-image wow fadeInRight" data-wow-delay=".4s">
+                        <img class="main-image" src="assets/images/hero/hero-image.png" alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Hero -->
+
+    <!-- Features -->
+    <section class="features section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-12">
+                    <div class="image wow fadeInLeft" data-wow-delay=".3s">
+                        <img src="assets/images/features/feature-img.png" alt="#">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="content">
+                        <h3 class="heading wow fadeInUp" data-wow-delay=".5s"><span>En önemli Özellikler</span>
+                        En yeni teknolojiler ile yapıldı
+                        </h3>
+                        <!-- Start Single Feature -->
+                        <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
+                            <div class="f-icon">
+                                <i class="lni lni-dashboard"></i>
+                            </div>
+                            <h4>Yüksek Performans</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis deserunt ratione quas quis consectetur!</p>
+                        </div>
+                        <!-- End Single Feature -->
+                        <!-- Start Single Feature -->
+                        <div class="single-feature wow fadeInUp" data-wow-delay=".7s">
+                            <div class="f-icon">
+                                <i class="lni lni-pencil-alt"></i>
+                            </div>
+                            <h4>Responsive Tasarımlar</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat officia similique blanditiis nihil aperiam pariatur!</p>
+                        </div>
+                        <!-- End Single Feature -->
+                        <!-- Start Single Feature -->
+                        <div class="single-feature wow fadeInUp" data-wow-delay="0.8s">
+                            <div class="f-icon">
+                                <i class="lni lni-vector"></i>
+                            </div>
+                            <h4>Güvenli Altyapı</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa deleniti voluptates dolor eaque, illo sed!</p>
+                        </div>
+                        <!-- End Single Feature -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Features -->
+
+
+    <!-- Footer -->
+    <%- include('includes/footer') %>
+    <!--/ End of Footer -->
+
+    <!-- İsterseniz bu alana daha fazla JS dosyası ekleyebilirsiniz -->
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <%- include('includes/head', {title: 'Deep Control Technology Anasayfa', description: 'Deep Control Technology\'nin anasayfasına ulaştınız '}) %> 
+    <!--İsterseniz bu alana daha fazla stil dosyası ekleyebilirsiniz-->
+    <style>
+.navbar-area {
+  position: relative;
+  z-index: 99;
+  -webkit-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  padding: 0px 0;
+}
+.navbar-area .button .btn {
+  background-color: var(--main_color);
+  color: #fff;
+}
+
+.navbar-area .button .btn:hover {
+  background-color: var(--main_color);
+  color: #fff;
+}
+
+.navbar .navbar-nav .nav-item a.active {
+  color: var(--main_color);
+}
+
+.navbar .navbar-nav .nav-item a {
+  color: #081828;
+}
+
+.navbar .navbar-nav .nav-item .sub-menu a.active {
+  color: #fff;
+}
+
+.navbar .mobile-menu-btn .toggler-icon {
+  background: #333;
+}
+
+#map{
+min-height: 750px;
+  height: 100%;
+}
+
+    </style>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        Üzülerek belirtiyoruz ki artık geçerli olmayan bir tarayıcı kullanıyorsunuz. Lütfen tarayıcınızı güncelleyin.
+      </p>
+    <![endif]-->
+    
+    <!-- Header -->
+<%- include('includes/header') %>
+    <!-- End of Header -->
+
+    <div id="map"></div>
+      <div id="sidebar"></div>
+    <!-- Footer -->
+    <%- include('includes/footer') %>
+    <!--/ End of Footer -->
+
+    <!-- İsterseniz bu alana daha fazla JS dosyası ekleyebilirsiniz -->
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcdthmPK3w5AThbQ1k_PZKZp6j9Y0FZ-o&callback=initMap">
+</script>
+    <script src="/assets/js/map.js" defer></script>
+</body>
+
+</html>
